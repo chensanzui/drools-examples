@@ -1,0 +1,9 @@
+package rules.keyworld.date_effective;
+dialect  "mvel"
+
+rule "date_effective"
+    date-effective "2018-05-27 1:00"
+    when
+    then
+    System.out.println("规则date_effective被执行");
+end

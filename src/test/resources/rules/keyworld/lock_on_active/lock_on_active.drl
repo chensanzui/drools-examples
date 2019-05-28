@@ -1,0 +1,19 @@
+package rules.keyworld.lock_on_active;
+import org.czy.example.vo.Message;
+rule "lock_on_active"
+       no-loop false
+       when
+          message : Message(status < 10)
+       then
+          message.setStatus(message.getStatus()+1);
+          update(message);
+end
+
+rule "otherRule"
+    #规则不会触发
+    lock-on-active true
+    when
+        message : Message(status == 10)
+    then
+        message.setMessage(Message.HELLO_MESSAGE);
+end

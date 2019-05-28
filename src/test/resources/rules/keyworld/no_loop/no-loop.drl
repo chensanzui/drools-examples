@@ -1,0 +1,13 @@
+package rules.keyworld.no_loop;
+import org.czy.example.vo.Message;
+
+rule "noLoop"
+    no-loop false
+    when
+       message : Message(status < 10)
+    then
+       message.setStatus(message.getStatus()+1);
+       //update不仅会修改对象，还会重新触发规则
+       //set只会修改对象，不会重新触发规则
+       update(message);
+end

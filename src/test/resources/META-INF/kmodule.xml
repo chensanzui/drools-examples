@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="helloworld" packages="rules.helloworld">
+        <ksession name="HelloWorldKS"/>
+    </kbase>
+    <kbase name="no_loop" packages="rules.keyworld.no_loop">
+        <ksession name="NoLoopKS"/>
+    </kbase>
+    <kbase name="lock_on_active" packages="rules.keyworld.lock_on_active">
+        <ksession name="LockOnActiveKS"/>
+    </kbase>
+    <kbase name="ruleflow_group" packages="rules.keyworld.ruleflow_group">
+        <ksession name="RuleFlowGroupKS"/>
+    </kbase>
+    <kbase name="salience_rule" packages="rules.keyworld.salience_rule">
+        <ksession name="SalienceKS"/>
+    </kbase>
+    <kbase name="collection" packages="rules.collection">
+        <ksession name="CollectionKS"/>
+    </kbase>
+    <kbase name="agenda_group" packages="rules.keyworld.agenda_group">
+        <ksession name="AgendaGroupKS"/>
+    </kbase>
+    <kbase name="activation_group" packages="rules.keyworld.activation_group">
+        <ksession name="ActivationGroupKS"/>
+    </kbase>
+    <kbase name="date_effective" packages="rules.keyworld.date_effective">
+        <ksession name="DateEffectiveKS"/>
+    </kbase>
+    <kbase name="timer_rule" packages="rules.keyworld.timer_rule">
+        <ksession name="TimerRuleKS"/>
+    </kbase>
+    <kbase name="calendars_rule" packages="rules.keyworld.calendars_rule">
+        <ksession name="CalendarsRuleKS"/>
+    </kbase>
+</kmodule>

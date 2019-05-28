@@ -1,0 +1,22 @@
+package rules.keyworld.agenda_group;
+
+rule "agenda-group"
+    agenda-group "demo"
+    when
+    then
+    System.out.println("规则agenda-group 被触发");
+end
+
+rule "agenda-group1"
+    agenda-group "demo"
+    when
+    then
+    System.out.println("规则agenda-group1 被触发");
+end
+
+
+rule "other-rule"
+    when
+    then
+    System.out.println("规则other-rule被触发");
+end

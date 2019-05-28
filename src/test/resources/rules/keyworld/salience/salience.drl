@@ -1,0 +1,23 @@
+package rules.keyworld.salience_rule;
+dialect  "mvel"
+
+rule "salience1"
+    salience 1
+    when
+    then
+        System.out.printf("优先级为1的规则执行了");
+end
+
+rule "salience2"
+    salience 3
+    when
+    then
+        System.out.printf("优先级为3的规则执行了");
+end
+
+rule "salience3"
+    salience -1
+    when
+    then
+        System.out.printf("优先级为-1的规则执行了");
+end

@@ -1,0 +1,19 @@
+package rules.keyworld.ruleflow_group;
+import org.czy.example.vo.Message;
+dialect  "mvel"
+
+rule "ruleflow-group1"
+    ruleflow-group "group1"
+    when
+       message : Message(status == Message.HELLO)
+    then
+       System.out.println("ruleflow-group1被执行");
+end
+
+rule "ruleflow-group2"
+    ruleflow-group "group2"
+    when
+       message : Message(status ==Message.HELLO)
+    then
+       System.out.println("ruleflow-group2被执行");
+end

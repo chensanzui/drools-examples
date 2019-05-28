@@ -1,0 +1,23 @@
+package rules.collection;
+import org.czy.example.collection.Car;
+import org.czy.example.collection.Person;
+import java.util.ArrayList;
+
+
+
+rule "collection_rule"
+    when
+        Person( $personCar : carList )
+        $car :Car() from $personCar
+    then
+        System.out.println($car.getName());
+end
+
+rule "collection_rule2"
+    when
+       Person($carName : carList[0].name)
+    then
+        System.out.println("222222222"+$carName);
+end
+
+

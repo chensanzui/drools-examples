@@ -1,0 +1,22 @@
+package rules.keyworld.activation_group;
+dialect  "mvel"
+
+rule "activation_group"
+    activation-group "demo"
+    when
+    then
+         System.out.println("规则activation_group被执行");
+end
+
+rule "activation_group1"
+    activation-group "demo"
+    when
+    then
+         System.out.println("规则activation_group1被执行");
+end
+
+rule "other_rule"
+    when
+    then
+         System.out.println("规则other_rule被执行");
+end

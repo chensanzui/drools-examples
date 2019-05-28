@@ -1,0 +1,18 @@
+package rules.helloworld;
+import org.czy.example.vo.Message
+import org.czy.example.vo.Message;
+
+rule "HELLO"
+    when
+        message : Message(status == Message.HELLO)
+    then
+        message.setMessage(Message.HELLO_MESSAGE);
+end
+
+rule "GOODBYE"
+    when
+        message : Message(status == Message.GOODBYE)
+    then
+        message.setMessage(Message.GOODBYE_MESSAGE);
+end
+

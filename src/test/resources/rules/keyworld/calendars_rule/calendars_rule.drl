@@ -1,0 +1,8 @@
+package rules.keyworld.calendars_rule;
+
+rule "calendars_rule"
+    calendars "weekday"
+    when
+    then
+        System.out.println(drools.getRule().getName()+"被执行");
+end
